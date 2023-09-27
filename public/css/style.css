@@ -1,0 +1,130 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Raleway', sans-serif;
+  background: #22c1c3;
+  background: linear-gradient(232deg, #22c1c3 0%, #b97bbe 49%, #2dfd87 100%); }
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px; }
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 10px; }
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #22c1c3;
+  background: linear-gradient(232deg, #22c1c3 0%, #7b81be 49%, #fdbb2d 100%);
+  border-radius: 10px; }
+
+::-webkit-scrollbar-thumb:hover {
+  background: #fdbb2d;
+  background: linear-gradient(232deg, #fdbb2d 0%, #7b81be 49%, #22c1c3 100%); }
+
+#musicPlayerApp {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  #musicPlayerApp .container {
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    border-radius: 10px;
+    width: 350px; }
+    #musicPlayerApp .container-body {
+      margin-top: -4px;
+      background: #d0320f;
+      background: radial-gradient(circle, #d0320f 0%, #d01fba 100%);
+      padding: 20px; }
+      #musicPlayerApp .container-body #music-details h1 {
+        font-size: 30px; }
+      #musicPlayerApp .container-body #music-details p {
+        font-size: 20px; }
+      #musicPlayerApp .container-body #progress {
+        margin-bottom: 20px; }
+        #musicPlayerApp .container-body #progress-bar {
+          width: 100%; }
+        #musicPlayerApp .container-body #progress .times {
+          display: flex;
+          justify-content: space-between;
+          align-items: center; }
+      #musicPlayerApp .container-body #controls .queue {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 40px; }
+        #musicPlayerApp .container-body #controls .queue i {
+          box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+          font-size: 25px;
+          margin-right: 20px;
+          padding: 10px 20px;
+          border-radius: 50%;
+          background: #ad0fd0;
+          background: radial-gradient(circle, #ad0fd0 0%, #5a1fd0 100%);
+          color: #fff; }
+        #musicPlayerApp .container-body #controls .queue i:hover {
+          cursor: pointer; }
+      #musicPlayerApp .container-body #controls .volumeControl {
+        display: flex;
+        justify-content: space-between; }
+        #musicPlayerApp .container-body #controls .volumeControl div button {
+          padding: 10px 15px;
+          font-size: 20px;
+          border: none;
+          outline: none;
+          cursor: pointer;
+          background: #22c1c3;
+          background: linear-gradient(232deg, #22c1c3 0%, #b97bbe 49%, #2dfd87 100%); }
+        #musicPlayerApp .container-body #controls .volumeControl .volume-section {
+          display: flex;
+          justify-content: center; }
+          #musicPlayerApp .container-body #controls .volumeControl .volume-section i {
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            background: #87e807;
+            border-radius: 50%;
+            margin-right: 10px; }
+          #musicPlayerApp .container-body #controls .volumeControl .volume-section input {
+            width: 80px; }
+    #musicPlayerApp .container #music-image {
+      width: 100%;
+      height: 300px; }
+  #musicPlayerApp .music-list {
+    transition: transform 1s ease-in-out;
+    transform: translateX(-2000px) translateY(-2000px);
+    overflow: hidden;
+    background: #760fd0;
+    background: linear-gradient(232deg, #760fd0 0%, #cb1fd0 100%);
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+    width: 500px;
+    align-self: flex-start;
+    margin: 80px 0 0 20px;
+    max-height: 635px;
+    overflow-y: scroll;
+    padding: 0 50px; }
+    #musicPlayerApp .music-list ul {
+      list-style: none;
+      padding: 0; }
+      #musicPlayerApp .music-list ul li {
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 20px;
+        border-bottom: 5px solid #970acf;
+        padding: 10px; }
+        #musicPlayerApp .music-list ul li span:nth-child(1) {
+          font-size: 18px;
+          color: #fff; }
+        #musicPlayerApp .music-list ul li span:nth-child(2) {
+          background-color: #cf0a4c;
+          color: #fff;
+          border-radius: 50%;
+          padding: 5px 10px; }
+      #musicPlayerApp .music-list ul li.playing {
+        background-color: #8a0acf; }
+  #musicPlayerApp .active {
+    transform: translateY(0) translateX(0); }
